@@ -221,7 +221,7 @@ def timeEvolutionRK45(X0, G0, phi0, h0, timestop, args):
 def singlelaser():
     args = tao_c, tao_f, a, p, 0.0, 0.0, esp, hmin, hmax 
     
-    X1list, X2list, G1list, G2list, deltaphilist, timelist = EfieldRK4(E0, G0, phi0, h, timestop, args)
+    X1list, X2list, G1list, G2list, deltaphilist, timelist = timeEvolutionRK45(E0, G0, phi0, h0, timestop, args)
 
     for i in range(2):
         X1list.pop()
